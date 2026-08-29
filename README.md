@@ -20,15 +20,15 @@ The architecture is designed as a microservices-based, event-driven system to en
 
 ```mermaid
 graph TD
-    A[Data Ingestion Layer (Kafka)] --> B(Stream Processing Engine (Flink))
-    B --> C{AI Risk Inference Engine (TensorFlow/PyTorch)}
-    C -->|High Risk| D[Alerting & Mitigation Service]
-    C -->|Normal| E[Time-Series Database (InfluxDB)]
+    A["Data Ingestion Layer (Kafka)"] --> B["(Stream Processing Engine (Flink))"]
+    B --> C["AI Risk Inference Engine (TensorFlow/PyTorch)"]
+    C -->|High Risk| D["Alerting & Mitigation Service"]
+    C -->|Normal| E["Time-Series Database (InfluxDB)"]
     B --> E
-    D --> F[Command Center Dashboard (React/TypeScript)]
+    D --> F["Command Center Dashboard (React/TypeScript)"]
     E --> F
-    C --> G[Audit Log Service]
-    G --> H[(Secure Data Lake)]
+    C --> G["Audit Log Service"]
+    G --> H["(Secure Data Lake)"]
 ```
 
 ### Data Flow Description
