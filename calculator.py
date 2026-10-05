@@ -7,7 +7,6 @@ def calculate_average(numbers):
     total = sum(numbers)
     return total / len(numbers)
 
-
 if __name__ == "__main__":
     # Example usage:
     print(calculate_average([1, 2, 3]))  # Output: 2.0
